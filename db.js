@@ -6,10 +6,15 @@ const connection = require('knex')(config)
 
 module.exports = {
   getAllBuses,
+  getAllSchedules,
 }
 
 //write functions below
 
 function getAllBuses(db = connection) {
   return db('buses').select()
+}
+
+function getAllSchedules(db = connection) {
+  return db('schedule').select()
 }
