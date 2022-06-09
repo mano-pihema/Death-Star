@@ -7,9 +7,8 @@ module.exports = router
 
 // define routes below
 
-router.get('/', async(req,res)=>{
+router.get('/', async (req, res) => {
   try {
-    
     const bus = await db.getAllBuses()
     res.render('home', bus)
   } catch (error) {

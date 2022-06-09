@@ -5,12 +5,11 @@ const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-  getAllBuses
+  getAllBuses,
 }
 
 //write functions below
 
-function getAllBuses(db =connection){
+function getAllBuses(db = connection) {
   return db('buses').select()
-  
 }
