@@ -15,3 +15,13 @@ router.get('/', async (req, res) => {
     res.status(500).send(error.message)
   }
 })
+
+// GET schedules
+router.get('/schedule', async (req, res) => {
+  try {
+    const schedule = await db.getAllSchedules()
+    res.render('schedule', schedule)
+  } catch (error) {
+    res.status(500).send(error.message)
+  }
+})
