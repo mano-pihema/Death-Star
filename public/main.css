@@ -20,13 +20,28 @@ figcaption{
   padding: 2px;
   text-align: center;
 }
+ nav{
+  display: inline-block;
+  background-color: #ffb703;
+  list-style-type: none;
+ }
 
-
-.navbar{
+.nav-item{
   display: inline;
   background-color: #ffb703;
   color:#023047;
+}
 
+li{
+  float: left;
+}
+
+li a{
+  color: white;
+}
+
+li a:vistited{
+  color: white;
 }
 
 .flex-container{
