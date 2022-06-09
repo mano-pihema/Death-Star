@@ -10,7 +10,7 @@ module.exports = router
 router.get('/', async (req, res) => {
   try {
     const bus = await db.getAllBuses()
-    res.render('home', bus)
+    res.render('home', { bus })
   } catch (error) {
     res.status(500).send(error.message)
   }
@@ -20,7 +20,8 @@ router.get('/', async (req, res) => {
 router.get('/schedule', async (req, res) => {
   try {
     const schedule = await db.getAllSchedules()
-    res.render('schedule', schedule)
+    console.log('schedule', schedule)
+    res.render('schedule', { schedule })
   } catch (error) {
     res.status(500).send(error.message)
   }
