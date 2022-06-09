@@ -10,10 +10,26 @@ header {
   font-family: 'Open Sans', sans-serif;
 
 }
+footer{
+  background-color: #023047;
+  color: #ffb703;
+  font-family: 'Open Sans', sans-serif;
+}
+
+figcaption{
+  padding: 2px;
+  text-align: center;
+}
+
 
 .navbar{
   display: inline;
   background-color: #ffb703;
   color:#023047;
+
+}
+
+.flex-container{
+  display: flex;
 }
 
