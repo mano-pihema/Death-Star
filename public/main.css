@@ -1,0 +1,19 @@
+body {
+  background-color: #219ebc;
+  color: #023047;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  background-color: #023047;
+  color: #ffb703;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.navbar{
+  display: inline;
+  background-color: #ffb703;
+  color:#023047;
+}
+
