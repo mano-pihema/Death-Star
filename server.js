@@ -3,6 +3,7 @@ const express = require('express')
 const hbs = require('express-handlebars')
 
 const routes = require('./routes/routes.js')
+
 /*
  * create the server
  *************************/
@@ -26,3 +27,5 @@ server.set('view engine', 'hbs')
  *************************/
 //get route for '/'
 //put in a server.use for where our other routes are stored and define it above
+
+server.use('/', routes)
