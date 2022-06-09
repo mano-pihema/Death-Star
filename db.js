@@ -16,5 +16,7 @@ function getAllBuses(db = connection) {
 }
 
 function getAllSchedules(db = connection) {
-  return db('schedule').select()
+  return db('schedule')
+    .join('buses', 'buses.id', 'schedule.bus_id')
+    .select('buses.name as name', 'schedule.day as day')
 }
