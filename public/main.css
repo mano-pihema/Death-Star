@@ -9,7 +9,7 @@ body {
 
 h2 {
   text-align: center;
-  color: rgb(255, 115, 0)
+  color: rgb(255, 115, 0);
 }
 
 .schedule-text {
@@ -21,7 +21,7 @@ header {
   color: #ffb703;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  padding: 10px;
+  padding: 2px;
   margin: 0%;
 }
 
@@ -41,7 +41,7 @@ figcaption{
   list-style-type: none;
   text-align: center;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   font-size: 2vw;
 
  }
@@ -50,7 +50,7 @@ figcaption{
   display: inline;
   background-color: #ffb703;
   color:#023047;
- padding: 10px 40px;
+  padding: 10px 40px;
 }
 
 li{
@@ -98,5 +98,29 @@ li a:vistited{
 .img{
   object-fit: cover;
   border-radius: 8%;
+}
+.form{
+  display: grid; 
+  grid-template-columns: 200px  300px;
+  grid-auto-flow: row;
+  grid-gap: 0.8em; 
+  padding: 25px;
+  border:5px solid #023047;
+  margin: 50px;
+  width: 600px;
+  
+}
+.center{
+  display: flex;
+justify-content: center;
+}
+
+.form button {
+  background-color: #ffb703;
+  color: #023047;
+  font-weight: 700;
+  padding: 0.5rem;
+  box-shadow: 3px 3px 0 var(--lightGreen); 
+  border: none;
   
 }

@@ -1,4 +1,6 @@
-<form method="post" action="/booking">
+
+<div class="center">
+<form method="post" action="/booking" class="form">
   <label for="name">Bus Theme</label>
   <select name="name" id="name">
   {{#each bus}}
@@ -10,18 +12,30 @@
 </label>
 <p>{{day}}</p>
 
-<label for="Name"> Name</label>
-<input type="text" id="name" name="name" placeholder="enter name">
+
+    <label for="name">Bus Theme</label>
+      <select name="name" id="name">
+        {{#each bus}}
+        <option value="{{id}}">{{name}}</option>
+        {{/each}}
+      </select>
+
+      <label for="day">Date</label>
+      <select name="day" id="day">
+      {{#each schedule}}
+        <option value="{{bus_id}}">{{day}}</option>
+      {{/each}}
+      </select>
 
 
-<label for="Guests"> Guests</label>
-<input type="text" id="guest" name="guest" placeholder="enter num of guest">
+    <label for="Name"> Name</label>
+    <input type="text" id="name" name="name" placeholder="enter name">
+
+    <label for="Guests"> Guests</label>
+    <input type="text" id="guest" name="guest" placeholder="enter num of guest">
 
 
-<button> book now</button>
+    <button> book now</button>
 
-
-
-
-
-</form>
+  </form>
+</div>
