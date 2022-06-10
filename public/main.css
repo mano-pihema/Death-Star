@@ -112,7 +112,7 @@ li a:vistited{
 }
 .center{
   display: flex;
-justify-content: center;
+  justify-content: center;
 }
 
 .form button {
