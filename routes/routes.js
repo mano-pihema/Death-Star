@@ -30,7 +30,33 @@ router.get('/schedule', async (req, res) => {
 
 router.get('/booking', async (req, res) => {
   try {
+    const bus = await db.getAllBuses()
+    const schedules = await db.getAllSchedules()
+
+    // const schedule = schedules.map((item) => ({
+    //   id: item.id,
+    //   day: item.day,
+    //   selected: item.bus_id === bus.id ? 'selected' : '',
+    // }))
+
+    const viewData = { schedules, bus }
+
+    res.render('booking', viewData)
   } catch (error) {
     res.status(500).send(error.message)
+  }
+})
+
+//post route
+
+router.post('/booking', async (req, res) => {
+  try {
+    const obj = req.body
+    console.log(obj)
+    await db.updateBooking(obj)
+
+    res.redirect(303, '/')
+  } catch (error) {
+    console.error(error.message)
   }
 })
