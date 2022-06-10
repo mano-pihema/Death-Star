@@ -2,14 +2,16 @@ body {
   background-color: #219ebc;
   color: #023047;
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 
 header {
   background-color: #023047;
   color: #ffb703;
   font-family: 'Open Sans', sans-serif;
-
+  text-align: center;
 }
+
 footer{
   background-color: #023047;
   color: #ffb703;
@@ -24,6 +26,8 @@ figcaption{
   display: inline-block;
   background-color: #ffb703;
   list-style-type: none;
+  text-align: center;
+  margin: 0;
  }
 
 .nav-item{
@@ -34,17 +38,27 @@ figcaption{
 
 li{
   float: left;
+  display: inline
 }
 
 li a{
   color: white;
+  padding: 14px 16px;
+  text-align: center;
 }
 
 li a:vistited{
   color: white;
 }
 
-.flex-container{
+.gallery{
+  display: flex;
+  flex-direction: row;
+  border:2px solid #023047;
+  margin: 25px;
+}
+
+.flex{
   display: flex;
 }
 
