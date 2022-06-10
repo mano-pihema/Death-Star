@@ -1,17 +1,14 @@
 
 <body>
-<div >
-  <h2>Which Party Bus Will You Choose?</h2>
-  <div>
-    {{#each bus}}
-      <div class="gallery">
-  {{!-- <a target="_blank" href="link to bus page here"> --}}
-    <img src="/images/bus{{id}}.jpg" alt="{{name}}" width="600" height="400">
-    <div class="desc">{{description}}</div> 
-  {{!-- </a> --}}
+<h2>Which Party Bus Will You Choose?</h2>
+<div class="big-div-box" >
   
-    </div>
-{{!-- </div> --}}
+  {{!-- //<div class ="flex"> --}}
+    {{#each bus}}
+      <div class="bus">
+        <img class = 'img' src="/images/bus{{id}}.jpg" alt="{{name}}" width="400" height="400">
+        <p>{{description}}</p>
+      </div>
     {{/each}}
-</div>
+  </div>
 </body>

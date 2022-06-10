@@ -3,6 +3,17 @@ body {
   color: #023047;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
+  text-align: center;
+  font-size: 2vw;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(255, 115, 0)
+}
+
+.schedule-text {
+  color: #ffb703;
 }
 
 header {
@@ -10,6 +21,8 @@ header {
   color: #ffb703;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
+  padding: 10px;
+  margin: 0%;
 }
 
 footer{
@@ -27,13 +40,17 @@ figcaption{
   background-color: #ffb703;
   list-style-type: none;
   text-align: center;
-  margin: 0;
+  width: 100%;
+  padding: 20px;
+  font-size: 2vw;
+
  }
 
 .nav-item{
   display: inline;
   background-color: #ffb703;
   color:#023047;
+ padding: 10px 40px;
 }
 
 li{
@@ -51,14 +68,35 @@ li a:vistited{
   color: white;
 }
 
-.gallery{
-  display: flex;
-  flex-direction: row;
-  border:2px solid #023047;
+.bus{
+
+  border:10px solid #023047;
   margin: 25px;
+  width: 400px;
+  border-radius: 10%;
+  padding: 10px
+  
 }
 
 .flex{
   display: flex;
+  justify-content: center;
+  align-content: center;
+  border:10px solid #023047;
+  margin:25px;
+  width: 350px;
 }
 
+
+.big-div-box {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  
+}
+
+.img{
+  object-fit: cover;
+  border-radius: 8%;
+  
+}
