@@ -26,3 +26,11 @@ router.get('/schedule', async (req, res) => {
     res.status(500).send(error.message)
   }
 })
+//add schedule
+
+router.get('/booking', async (req, res) => {
+  try {
+  } catch (error) {
+    res.status(500).send(error.message)
+  }
+})
