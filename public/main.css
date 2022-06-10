@@ -3,13 +3,19 @@ body {
   color: #023047;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
+  text-align: center;
 }
 
+h2 {
+  text-align: center;
+}
 header {
   background-color: #023047;
   color: #ffb703;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
+  padding: 10px;
+  margin: 0%;
 }
 
 footer{
@@ -27,13 +33,17 @@ figcaption{
   background-color: #ffb703;
   list-style-type: none;
   text-align: center;
-  margin: 0;
+  width: 100%;
+  padding: 20px;
+  font-size: large;
+
  }
 
 .nav-item{
   display: inline;
   background-color: #ffb703;
   color:#023047;
+ padding: 10px 40px;
 }
 
 li{
@@ -60,5 +70,13 @@ li a:vistited{
 
 .flex{
   display: flex;
+  justify-content: center;
+ align-content: center;
+  border:2px solid #023047;
+  margin:25px;
+  width: 350px;
 }
 
+ul {
+  display: flex;
+}
