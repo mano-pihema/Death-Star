@@ -1,5 +1,17 @@
+
 <div class="center">
-  <form class="form" action="post">
+<form method="post" action="/booking" class="form">
+  <label for="name">Bus Theme</label>
+  <select name="name" id="name">
+  {{#each bus}}
+  <option value="{{id}}">{{name}}</option>
+{{/each}}
+</select>
+ 
+<label for="day"> Day
+</label>
+<p>{{day}}</p>
+
 
     <label for="name">Bus Theme</label>
       <select name="name" id="name">
