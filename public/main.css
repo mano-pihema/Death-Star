@@ -1,5 +1,5 @@
 body {
-  background-color: #219ebc;
+  background-color: white;
   color: #023047;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -13,7 +13,7 @@ h2 {
 }
 
 .schedule-text {
-  color: #ffb703;
+  color: #023047;
 }
 
 header {
