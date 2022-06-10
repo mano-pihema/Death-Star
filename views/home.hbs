@@ -1,12 +1,11 @@
 
 <body>
 <h2>Which Party Bus Will You Choose?</h2>
-<div class="big-div-box" >
-  
-  {{!-- //<div class ="flex"> --}}
+  <div class="big-div-box" >
     {{#each bus}}
       <div class="bus">
         <img class = 'img' src="/images/bus{{id}}.jpg" alt="{{name}}" width="400" height="400">
+        <h3> {{name}}</h3>
         <p>{{description}}</p>
       </div>
     {{/each}}
