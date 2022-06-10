@@ -1,17 +1,17 @@
 
-<section class="">
+<body>
+<div >
   <h2>Which Party Bus Will You Choose?</h2>
-
-  <ul>
+  <div>
     {{#each bus}}
-    <div class="flex-container">
-      <li>
-        <h3> {{name}}</h3>
-        <p>{{description}}</p>
-        <img src="">
-      </li>
+      <div class="gallery">
+  {{!-- <a target="_blank" href="link to bus page here"> --}}
+    <img src="/images/bus{{id}}.jpg" alt="{{name}}" width="600" height="400">
+    <div class="desc">{{description}}</div> 
+  {{!-- </a> --}}
+  
     </div>
+{{!-- </div> --}}
     {{/each}}
-  </ul>
-
-</section>
+</div>
+</body>
