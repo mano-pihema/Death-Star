@@ -9,6 +9,7 @@ module.exports = {
   getAllSchedules,
   updateBooking,
   getAllScheduleId,
+  deleteBus,
 }
 
 //write functions below
@@ -41,4 +42,8 @@ function getAllScheduleId(num, db = connection) {
     .join('schedule', 'schedule.bus_id', 'booking.schedule_id')
     .where('schedule.bus_id', num)
     .select('bus_id')
+}
+
+function deleteBus(num, db = connection) {
+  return db('schedule').where('schedule.bus_id', num).del()
 }

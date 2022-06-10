@@ -56,9 +56,10 @@ router.post('/booking', async (req, res) => {
     const idNum = await db.getAllScheduleId(num)
 
     const [id] = Object.values(idNum)
-
+    const numberid = id.bus_id
+    console.log(numberid)
     await db.updateBooking(obj, id)
-
+    await db.deleteBus(numberid)
     res.redirect(303, '/')
   } catch (error) {
     console.error(error.message)
