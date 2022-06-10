@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 router.get('/schedule', async (req, res) => {
   try {
     const schedule = await db.getAllSchedules()
-    console.log('schedule', schedule)
+
     res.render('schedule', { schedule })
   } catch (error) {
     res.status(500).send(error.message)
@@ -50,10 +50,14 @@ router.get('/booking', async (req, res) => {
 //post route
 
 router.post('/booking', async (req, res) => {
+  const obj = req.body
+  const num = req.body.name[0]
   try {
-    const obj = req.body
-    console.log(obj)
-    await db.updateBooking(obj)
+    const idNum = await db.getAllScheduleId(num)
+
+    const [id] = Object.values(idNum)
+
+    await db.updateBooking(obj, id)
 
     res.redirect(303, '/')
   } catch (error) {
