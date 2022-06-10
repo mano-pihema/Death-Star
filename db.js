@@ -8,6 +8,7 @@ module.exports = {
   getAllBuses,
   getAllSchedules,
   updateBooking,
+  getAllScheduleId,
 }
 
 //write functions below
@@ -26,10 +27,18 @@ function getAllSchedules(db = connection) {
     )
 }
 
-function updateBooking(obj, db = connection) {
-  const newBook = {
-    name: obj.name,
+function updateBooking(obj, idNum, db = connection) {
+  return db('booking').insert({
+    name: obj.name[1],
+    id: obj.id,
     guestNum: obj.guest,
-  }
-  return db('booking').insert(newBook)
+    schedule_id: idNum.bus_id,
+  })
+}
+
+function getAllScheduleId(num, db = connection) {
+  return db('booking')
+    .join('schedule', 'schedule.bus_id', 'booking.schedule_id')
+    .where('schedule.bus_id', num)
+    .select('bus_id')
 }
